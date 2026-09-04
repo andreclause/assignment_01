@@ -14,11 +14,12 @@ return — replace the `# TODO` line (and the `pass`) with your code.
 
 def tip_amount(subtotal, pct):
     """Return the tip: `pct` percent of `subtotal`, rounded to the nearest cent.
-
+    
     >>> tip_amount(50, 20)
     10.0
     """
     # TODO: your code here
+    return round(subtotal * pct / 100,2)
     pass
 
 
@@ -31,6 +32,7 @@ def grand_total(subtotal, pct):
     60.0
     """
     # TODO: your code here
+    return tip_amount(subtotal + tip_amount(subtotal, pct), 2)
     pass
 
 
@@ -43,14 +45,16 @@ def split_evenly(total, people):
     15.0
     """
     # TODO: your code here
+    return round(total / people, 2)
     pass
 
 
 def is_generous(pct):
     """Return True when a tip percent is considered generous (20% or more).
-
+also
     >>> is_generous(20)
     True
     """
     # TODO: your code here
+    return pct >= 20
     pass
